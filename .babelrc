@@ -1,0 +1,17 @@
+{
+  "presets": [
+    "stage-1",
+    "stage-0",
+    "es2015",
+    "react"
+
+  ],
+  "plugins": [
+    "transform-regenerator",
+    "transform-object-rest-spread",
+    "add-module-exports",
+    "transform-react-es6-displayname",
+    "transform-runtime"
+
+  ]
+}

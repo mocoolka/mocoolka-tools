@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/module-tools.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-mocoolka-tools.html">mocoolka-tools</a></li><li><a href="module-mocoolka-tools-array.html">mocoolka-tools-array</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-array.html#~getArrayFromArrayByOrder">getArrayFromArrayByOrder</a></li></ul></li><li><a href="module-mocoolka-tools-cldr.html">mocoolka-tools-cldr</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-cldr.html#~getSupportedLanguage">getSupportedLanguage</a></li><li data-type='method'><a href="module-mocoolka-tools-cldr.html#~getSupportedLanguages">getSupportedLanguages</a></li><li data-type='method'><a href="module-mocoolka-tools-cldr.html#~isSupportedLanguage">isSupportedLanguage</a></li></ul></li><li><a href="module-mocoolka-tools-env.html">mocoolka-tools-env</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-env.html#~appLanguage">appLanguage</a></li></ul></li><li><a href="module-mocoolka-tools-file.html">mocoolka-tools-file</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file.html#~createDirNotExist">createDirNotExist</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~directoryDepth">directoryDepth</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~fileExist">fileExist</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~getCurrentDir">getCurrentDir</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~getTrailerAfterDot">getTrailerAfterDot</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~IsExceedMaxDirectoryDepth">IsExceedMaxDirectoryDepth</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~isFullPath">isFullPath</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~maxDirectoryDepth">maxDirectoryDepth</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~openFile">openFile</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~openFileAsPlainString">openFileAsPlainString</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~path">path</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~pathArray">pathArray</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~realPath">realPath</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~stripBom">stripBom</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~unsymbolLink">unsymbolLink</a></li></ul></li><li><a href="module-mocoolka-tools-file-js.html">mocoolka-tools-file-js</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file-js.html#~open">open</a></li></ul></li><li><a href="module-mocoolka-tools-file-json.html">mocoolka-tools-file-json</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file-json.html#~open">open</a></li></ul></li><li><a href="module-mocoolka-tools-file-yml.html">mocoolka-tools-file-yml</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file-yml.html#~open">open</a></li></ul></li><li><a href="module-mocoolka-tools-format.html">mocoolka-tools-format</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-format.html#~mapArgs">mapArgs</a></li><li data-type='method'><a href="module-mocoolka-tools-format.html#~mapPercent">mapPercent</a></li><li data-type='method'><a href="module-mocoolka-tools-format.html#~retrievePercentSymbol">retrievePercentSymbol</a></li></ul></li><li><a href="module-mocoolka-tools-global.html">mocoolka-tools-global</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-global.html#~getGLB">getGLB</a></li><li data-type='method'><a href="module-mocoolka-tools-global.html#~getGlobal">getGlobal</a></li></ul></li><li><a href="module-mocoolka-tools-i18n.html">mocoolka-tools-i18n</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~enumerateMsgSync">enumerateMsgSync</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~getRootDir">getRootDir</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~headerIncluded">headerIncluded</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~intlDir">intlDir</a></li></ul></li><li><a href="module-mocoolka-tools-module.html">mocoolka-tools-module</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-module.html#~enumerateFilesSync">enumerateFilesSync</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~enumerateFilesSyncPriv">enumerateFilesSyncPriv</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~fileSyncScanned">fileSyncScanned</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~getModuleItem">getModuleItem</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~getModuleName">getModuleName</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~getModuleVersion">getModuleVersion</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~isRootModule">isRootModule</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~moduleFileResolve">moduleFileResolve</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~resolveDependencies">resolveDependencies</a></li></ul></li><li><a href="module-mocoolka-tools-object.html">mocoolka-tools-object</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-object.html#~clone">clone</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~merge">merge</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~mergeAll">mergeAll</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~mergeBase">mergeBase</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~mergeRecursiveBasic">mergeRecursiveBasic</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~typeOf">typeOf</a></li></ul></li><li><a href="module-mocoolka-tools-os.html">mocoolka-tools-os</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-os.html#~getOSLanguage">getOSLanguage</a></li><li data-type='method'><a href="module-mocoolka-tools-os.html#~getPlatform">getPlatform</a></li></ul></li><li><a href="module-mocoolka-tools-string.html">mocoolka-tools-string</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-string.html#~format">format</a></li><li data-type='method'><a href="module-mocoolka-tools-string.html#~md5">md5</a></li><li data-type='method'><a href="module-mocoolka-tools-string.html#~md5Cache">md5Cache</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">lib/module-tools.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** @module mocoolka-tools-module */
+let debug = require('debug')('mocoolka-tools');
+import fileTools from './file-tools.js';
+import fs from 'fs';
+import md5 from 'md5';
+import _  from 'lodash';
+import path from 'path';
+import assert from 'assert';
+/**
+ * get module name defined in package.json.
+ * @param {string} root module root path
+ */
+let getModuleName = (root)=> (
+   getModuleItem(root, 'name')
+);
+/**
+ * get package version defined in package.json
+ * @param {string} root module root path
+ */
+let getModuleVersion = (root)=> (
+   getModuleItem(root, 'version')
+);
+/**
+ * get Modolue item defined in package.json
+ * @param {string}root  root module root path
+ * @param {string}itemName name defined in package
+ * @returns {*}
+ */
+let getModuleItem = (root, itemName)=> {
+  root = root || MY_ROOT;
+  let item = null;
+  try {
+    item = require(path.join(root, 'package.json'))[itemName];
+  } catch (e) {}
+
+  return item;
+};
+
+/**
+ * Enumerate all JS files in this application
+ * @param {Function}
+ *   param.content is a UTF8 string of each JS source file.
+ */
+const showDotCount = 500;
+const showCountCount = 10000;
+let enumeratedFilesCount = 0;
+
+/**
+ * enumerate Files in sync
+ * @param {string}rootDir enumerate Files in root directory
+ * @param {Array}blackList path array,path in blackList will skip
+ * @param {Array}targetFileType  file will skip when file not in targetFileType
+ * @param {boolean}checkNodeModules if true check node_modules
+ * @param {Function}callback
+ */
+const enumerateFilesSync = (rootDir, blackList, targetFileType,  checkNodeModules, callback)=> {
+  enumeratedFilesCount = 0;
+  let scannedFileNameHash = [];
+  assert(rootDir);
+  assert(typeof callback === 'function');
+  if (checkNodeModules === undefined)
+    checkNodeModules = false;
+  return enumerateFilesSyncPriv(rootDir, rootDir, blackList, targetFileType,
+    checkNodeModules,	scannedFileNameHash, callback);
+};
+
+/**
+ * if file be scanned,return true,or add to scannedFileNameHash return false
+ * @param {string}fileName
+ * @param {Array}scannedFileNameHash
+ * @returns {boolean}
+ */
+let fileSyncScanned = (fileName, scannedFileNameHash)=> {
+  let realFileName = process.browser ? fileName : fs.realpathSync(fileName);
+  let fileNameHash = md5(realFileName);
+  if (scannedFileNameHash.indexOf(fileNameHash) >= 0) {
+    return true;
+  } else {
+    scannedFileNameHash.push(fileNameHash);
+    return false;
+  }
+};
+
+const enumerateFilesExcludeDicNames = ['test', 'node_modules', 'coverage'];
+/**
+ * enumerate file in module.
+ * @param {string}currentPath
+ * @param {string}rootDir
+ * @param {Array}blackList path array,path in blackList will skip
+ * @param {Array}targetFileType file will skip when file not in targetFileType
+ * @param {boolean}checkNodeModules if true check node_modules
+ * @param {Array}scannedFileNameHash
+ * @param {Function}callback
+ */
+const enumerateFilesSyncPriv = (currentPath, rootDir, blackList, targetFileType, checkNodeModules,
+  scannedFileNameHash, callback)=> {
+
+  currentPath = path.resolve(currentPath);
+
+  //if file scanned
+  if (fileSyncScanned(currentPath, scannedFileNameHash)) return;
+  rootDir = path.resolve(rootDir);
+  blackList = Array.isArray(blackList) ? blackList : [];
+  if (!Array.isArray(targetFileType)) targetFileType = [targetFileType];
+
+  //if currentPath in blackList skip
+  let skipDir = false;
+  blackList.map(function (part) {
+    if (typeof part !== 'string') return;
+    if (currentPath.indexOf(part) >= 0) skipDir = true;
+  });
+
+  if (skipDir) {
+    debug('***  skipping directory:%s', currentPath);
+    return;
+  }
+
+  let files = null;
+  try {
+    files = fs.readdirSync(currentPath);
+  } catch (e) {
+    return;
+  }
+
+  //each file in currentPath
+  files.map(item=> {
+    if (item.indexOf('.') === 0) return;
+    let child = path.join(currentPath, item);
+    let stats = null;
+    try {
+      stats = fs.statSync(child);
+    } catch (e) {
+      return;
+    }
+
+    if (stats.isDirectory()) {
+      item = item.toLowerCase();
+      if (enumerateFilesExcludeDicNames.includes(item))
+     return;
+      enumerateFilesSyncPriv(child, rootDir, blackList, targetFileType, checkNodeModules,
+        scannedFileNameHash, callback);
+    } else {
+      let fileType = fileTools.getTrailerAfterDot(item);
+
+      //check file type
+      if (targetFileType.indexOf(fileType) &lt; 0) return;
+      let content = fileTools.stripBom(fs.readFileSync(child, 'utf8'));
+      debug('examining file:%s', child);
+      if (checkNodeModules) {
+        enumeratedFilesCount++;
+        if (enumeratedFilesCount % showDotCount === 0) {
+          process.stdout.write('.');
+          if (enumeratedFilesCount % showCountCount === 0) {
+            process.stdout.write(' ' + enumeratedFilesCount.toString() + '\n');
+          }
+        }
+      }
+
+      callback(content, child);
+    };
+  });
+  if (checkNodeModules) {
+    let moduleRootPaths = resolveDependencies(currentPath, rootDir);
+    if (moduleRootPaths) {
+      moduleRootPaths.map(modulePath=> {
+        if (fileTools.IsExceedMaxDirectoryDepth(modulePath, rootDir))
+          return;
+        enumerateFilesSyncPriv(modulePath, rootDir, blackList, targetFileType, checkNodeModules,
+          scannedFileNameHash, callback);
+      });
+    }
+  }
+};
+
+/**
+ * resolve module dependencies
+ * @param {string}currentDir function process current dictionary
+ * @param {string}rootDir function process root dictionary
+ * @param {Array}moduleRootPaths
+ * @returns {Array}
+ */
+const resolveDependencies = (currentDir, rootDir, moduleRootPaths)=> {
+  moduleRootPaths = moduleRootPaths || [];
+  let packageJson = path.join(currentDir, 'package.json');
+  let deps = null;
+  try {
+    //resolve package.json
+    deps = require(packageJson).dependencies;
+  } catch (e) {
+    return null;
+  }
+
+  if (deps === undefined || !deps) return null;
+  deps = Object.keys(deps);
+  if (deps.length === 0) return null;
+  deps.map(dep=> {
+    let depPath = moduleFileResolve(dep, currentDir, rootDir);
+    if (depPath &amp;&amp; moduleRootPaths.indexOf(depPath) &lt; 0) {
+      moduleRootPaths.push(depPath);
+      resolveDependencies(depPath, rootDir, moduleRootPaths);
+    }
+  });
+  moduleRootPaths = _.uniq(_.compact(moduleRootPaths));
+  return moduleRootPaths;
+};
+
+/**
+ * resolve module file
+ * @param {string}depName module name
+ * @param {string}currentDir
+ * @param {string}rootDir
+ * @returns {string|null}
+ */
+const moduleFileResolve = (depName, currentDir, rootDir)=> {
+  // simulates npm v3 dependency resolution
+  let depPath = null;
+  let stats = null;
+  try {
+    depPath = path.join(currentDir, 'node_modules', depName);
+    stats = fs.lstatSync(depPath);
+  } catch (e) {
+    stats = null;
+    try {
+      depPath = path.join(rootDir, 'node_modules', depName);
+      stats = fs.lstatSync(depPath);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  if (!stats) return null;
+  return fileTools.unsymbolLink(depPath);
+};
+
+/**
+ * if path is root
+ * @param {string} path
+ * @returns {boolean}
+ */
+const isRootModule = (path)=> {
+  if (!global.MOCOOLKA_GLB) return false;
+  return path === global.MOCOOLKA_GLB.MASTER_ROOT_DIR;
+};
+
+const moduleTools = {
+  getModuleName,
+  getModuleVersion,
+  isRootModule,
+  enumerateFilesSync,
+};
+
+export default moduleTools;
+
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Mon Apr 03 2017 17:56:46 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

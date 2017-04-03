@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/string-tools.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-mocoolka-tools.html">mocoolka-tools</a></li><li><a href="module-mocoolka-tools-array.html">mocoolka-tools-array</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-array.html#~getArrayFromArrayByOrder">getArrayFromArrayByOrder</a></li></ul></li><li><a href="module-mocoolka-tools-cldr.html">mocoolka-tools-cldr</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-cldr.html#~getSupportedLanguage">getSupportedLanguage</a></li><li data-type='method'><a href="module-mocoolka-tools-cldr.html#~getSupportedLanguages">getSupportedLanguages</a></li><li data-type='method'><a href="module-mocoolka-tools-cldr.html#~isSupportedLanguage">isSupportedLanguage</a></li></ul></li><li><a href="module-mocoolka-tools-env.html">mocoolka-tools-env</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-env.html#~appLanguage">appLanguage</a></li></ul></li><li><a href="module-mocoolka-tools-file.html">mocoolka-tools-file</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file.html#~createDirNotExist">createDirNotExist</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~directoryDepth">directoryDepth</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~fileExist">fileExist</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~getCurrentDir">getCurrentDir</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~getTrailerAfterDot">getTrailerAfterDot</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~IsExceedMaxDirectoryDepth">IsExceedMaxDirectoryDepth</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~isFullPath">isFullPath</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~maxDirectoryDepth">maxDirectoryDepth</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~openFile">openFile</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~openFileAsPlainString">openFileAsPlainString</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~path">path</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~pathArray">pathArray</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~realPath">realPath</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~stripBom">stripBom</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~unsymbolLink">unsymbolLink</a></li></ul></li><li><a href="module-mocoolka-tools-file-js.html">mocoolka-tools-file-js</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file-js.html#~open">open</a></li></ul></li><li><a href="module-mocoolka-tools-file-json.html">mocoolka-tools-file-json</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file-json.html#~open">open</a></li></ul></li><li><a href="module-mocoolka-tools-file-yml.html">mocoolka-tools-file-yml</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file-yml.html#~open">open</a></li></ul></li><li><a href="module-mocoolka-tools-format.html">mocoolka-tools-format</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-format.html#~mapArgs">mapArgs</a></li><li data-type='method'><a href="module-mocoolka-tools-format.html#~mapPercent">mapPercent</a></li><li data-type='method'><a href="module-mocoolka-tools-format.html#~retrievePercentSymbol">retrievePercentSymbol</a></li></ul></li><li><a href="module-mocoolka-tools-global.html">mocoolka-tools-global</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-global.html#~getGLB">getGLB</a></li><li data-type='method'><a href="module-mocoolka-tools-global.html#~getGlobal">getGlobal</a></li></ul></li><li><a href="module-mocoolka-tools-i18n.html">mocoolka-tools-i18n</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~enumerateMsgSync">enumerateMsgSync</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~getRootDir">getRootDir</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~headerIncluded">headerIncluded</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~intlDir">intlDir</a></li></ul></li><li><a href="module-mocoolka-tools-module.html">mocoolka-tools-module</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-module.html#~enumerateFilesSync">enumerateFilesSync</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~enumerateFilesSyncPriv">enumerateFilesSyncPriv</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~fileSyncScanned">fileSyncScanned</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~getModuleItem">getModuleItem</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~getModuleName">getModuleName</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~getModuleVersion">getModuleVersion</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~isRootModule">isRootModule</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~moduleFileResolve">moduleFileResolve</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~resolveDependencies">resolveDependencies</a></li></ul></li><li><a href="module-mocoolka-tools-object.html">mocoolka-tools-object</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-object.html#~clone">clone</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~merge">merge</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~mergeAll">mergeAll</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~mergeBase">mergeBase</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~mergeRecursiveBasic">mergeRecursiveBasic</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~typeOf">typeOf</a></li></ul></li><li><a href="module-mocoolka-tools-os.html">mocoolka-tools-os</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-os.html#~getOSLanguage">getOSLanguage</a></li><li data-type='method'><a href="module-mocoolka-tools-os.html#~getPlatform">getPlatform</a></li></ul></li><li><a href="module-mocoolka-tools-string.html">mocoolka-tools-string</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-string.html#~format">format</a></li><li data-type='method'><a href="module-mocoolka-tools-string.html#~md5">md5</a></li><li data-type='method'><a href="module-mocoolka-tools-string.html#~md5Cache">md5Cache</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">lib/string-tools.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** @module mocoolka-tools-string */
+import md5Source from 'md5';
+import memoize from 'lodash/memoize';
+import util from 'util';
+
+/**
+ * convert message using md5
+ * @param {string|buffer|Array}message
+ * @param {Object}options encoding:'binary' message type is binary
+ * asBytes:true return binary,asString:true return binary to string
+ * @return {string|binary}
+ */
+const md5 = (message, options)=> (
+  md5Source(message, options)
+);
+
+/**
+ * cache md5 result value
+ * @param {string|buffer|Array}message
+ * @param {Object}options encoding:'binary' message type is binary
+ * asBytes:true return binary,asString:true return binary to string
+ * @return {string|binary}
+ */
+const md5Cache = (message, options)=> (
+   (memoize(md5))(message, options)
+);
+
+/**
+ * format message using variable
+ * @param {...string|number|json} args
+ * @return {string}
+ */
+const format = (...args)=>(
+  util.format.apply(null, args)
+);
+
+const stringTools = {
+  md5,
+  md5Cache,
+  format,
+};
+
+export default stringTools;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Mon Apr 03 2017 17:56:46 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

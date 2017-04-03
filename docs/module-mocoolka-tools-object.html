@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>mocoolka-tools-object - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-mocoolka-tools.html">mocoolka-tools</a></li><li><a href="module-mocoolka-tools-array.html">mocoolka-tools-array</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-array.html#~getArrayFromArrayByOrder">getArrayFromArrayByOrder</a></li></ul></li><li><a href="module-mocoolka-tools-cldr.html">mocoolka-tools-cldr</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-cldr.html#~getSupportedLanguage">getSupportedLanguage</a></li><li data-type='method'><a href="module-mocoolka-tools-cldr.html#~getSupportedLanguages">getSupportedLanguages</a></li><li data-type='method'><a href="module-mocoolka-tools-cldr.html#~isSupportedLanguage">isSupportedLanguage</a></li></ul></li><li><a href="module-mocoolka-tools-env.html">mocoolka-tools-env</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-env.html#~appLanguage">appLanguage</a></li></ul></li><li><a href="module-mocoolka-tools-file.html">mocoolka-tools-file</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file.html#~createDirNotExist">createDirNotExist</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~directoryDepth">directoryDepth</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~fileExist">fileExist</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~getCurrentDir">getCurrentDir</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~getTrailerAfterDot">getTrailerAfterDot</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~IsExceedMaxDirectoryDepth">IsExceedMaxDirectoryDepth</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~isFullPath">isFullPath</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~maxDirectoryDepth">maxDirectoryDepth</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~openFile">openFile</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~openFileAsPlainString">openFileAsPlainString</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~path">path</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~pathArray">pathArray</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~realPath">realPath</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~stripBom">stripBom</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~unsymbolLink">unsymbolLink</a></li></ul></li><li><a href="module-mocoolka-tools-file-js.html">mocoolka-tools-file-js</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file-js.html#~open">open</a></li></ul></li><li><a href="module-mocoolka-tools-file-json.html">mocoolka-tools-file-json</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file-json.html#~open">open</a></li></ul></li><li><a href="module-mocoolka-tools-file-yml.html">mocoolka-tools-file-yml</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file-yml.html#~open">open</a></li></ul></li><li><a href="module-mocoolka-tools-format.html">mocoolka-tools-format</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-format.html#~mapArgs">mapArgs</a></li><li data-type='method'><a href="module-mocoolka-tools-format.html#~mapPercent">mapPercent</a></li><li data-type='method'><a href="module-mocoolka-tools-format.html#~retrievePercentSymbol">retrievePercentSymbol</a></li></ul></li><li><a href="module-mocoolka-tools-global.html">mocoolka-tools-global</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-global.html#~getGLB">getGLB</a></li><li data-type='method'><a href="module-mocoolka-tools-global.html#~getGlobal">getGlobal</a></li></ul></li><li><a href="module-mocoolka-tools-i18n.html">mocoolka-tools-i18n</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~enumerateMsgSync">enumerateMsgSync</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~getRootDir">getRootDir</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~headerIncluded">headerIncluded</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~intlDir">intlDir</a></li></ul></li><li><a href="module-mocoolka-tools-module.html">mocoolka-tools-module</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-module.html#~enumerateFilesSync">enumerateFilesSync</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~enumerateFilesSyncPriv">enumerateFilesSyncPriv</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~fileSyncScanned">fileSyncScanned</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~getModuleItem">getModuleItem</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~getModuleName">getModuleName</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~getModuleVersion">getModuleVersion</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~isRootModule">isRootModule</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~moduleFileResolve">moduleFileResolve</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~resolveDependencies">resolveDependencies</a></li></ul></li><li><a href="module-mocoolka-tools-object.html">mocoolka-tools-object</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-object.html#~clone">clone</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~merge">merge</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~mergeAll">mergeAll</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~mergeBase">mergeBase</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~mergeRecursiveBasic">mergeRecursiveBasic</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~typeOf">typeOf</a></li></ul></li><li><a href="module-mocoolka-tools-os.html">mocoolka-tools-os</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-os.html#~getOSLanguage">getOSLanguage</a></li><li data-type='method'><a href="module-mocoolka-tools-os.html#~getPlatform">getPlatform</a></li></ul></li><li><a href="module-mocoolka-tools-string.html">mocoolka-tools-string</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-string.html#~format">format</a></li><li data-type='method'><a href="module-mocoolka-tools-string.html#~md5">md5</a></li><li data-type='method'><a href="module-mocoolka-tools-string.html#~md5Cache">md5Cache</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">mocoolka-tools-object</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="~clone"><span class="type-signature">(inner) </span>clone<span class="signature">(input)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_object-tools.js.html">lib/object-tools.js</a>, <a href="lib_object-tools.js.html#line7">line 7</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>clome object</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>cloned object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~merge"><span class="type-signature">(inner) </span>merge<span class="signature">(&hellip;args)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_object-tools.js.html">lib/object-tools.js</a>, <a href="lib_object-tools.js.html#line102">line 102</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>merge all input using clone and recursive</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~mergeAll"><span class="type-signature">(inner) </span>mergeAll<span class="signature">(isClone, isRecursive, &hellip;args)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_object-tools.js.html">lib/object-tools.js</a>, <a href="lib_object-tools.js.html#line112">line 112</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>merge all input object.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>isClone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>if true use clone</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>isRecursive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>if true use recursive.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~mergeBase"><span class="type-signature">(inner) </span>mergeBase<span class="signature">(isClone, isRecursive, args)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_object-tools.js.html">lib/object-tools.js</a>, <a href="lib_object-tools.js.html#line56">line 56</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Merge two or more objects</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>isClone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>clone</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>isRecursive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>object</p>
+</div>
+
+
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~mergeRecursiveBasic"><span class="type-signature">(inner) </span>mergeRecursiveBasic<span class="signature">(base, extend)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_object-tools.js.html">lib/object-tools.js</a>, <a href="lib_object-tools.js.html#line30">line 30</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Merge two objects recursively</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>base</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>input</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>extend</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>extend</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>mixed</p>
+</div>
+
+
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~typeOf"><span class="type-signature">(inner) </span>typeOf<span class="signature">(input)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_object-tools.js.html">lib/object-tools.js</a>, <a href="lib_object-tools.js.html#line94">line 94</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="http://jsperf.com/typeofvar">http://jsperf.com/typeofvar</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Get type of variable</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>string</p>
+</div>
+
+
+
+    
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Mon Apr 03 2017 17:56:46 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

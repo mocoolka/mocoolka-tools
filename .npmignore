@@ -1,0 +1,9 @@
+node_modules
+.idea
+.babelrc
+test
+examples
+src
+docs
+jsdoc.json
+.jscsrc

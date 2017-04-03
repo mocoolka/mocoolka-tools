@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>i18n-tools.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#appLanguage">appLanguage</a></li><li><a href="global.html#clone">clone</a></li><li><a href="global.html#createDirNotExist">createDirNotExist</a></li><li><a href="global.html#directoryDepth">directoryDepth</a></li><li><a href="global.html#enumerateFilesSync">enumerateFilesSync</a></li><li><a href="global.html#enumerateFilesSyncPriv">enumerateFilesSyncPriv</a></li><li><a href="global.html#enumerateMsgSync">enumerateMsgSync</a></li><li><a href="global.html#fileExist">fileExist</a></li><li><a href="global.html#fileSyncScanned">fileSyncScanned</a></li><li><a href="global.html#format">format</a></li><li><a href="global.html#getArrayFromArrayByOrder">getArrayFromArrayByOrder</a></li><li><a href="global.html#getCurrentDir">getCurrentDir</a></li><li><a href="global.html#getGLB">getGLB</a></li><li><a href="global.html#getGlobal">getGlobal</a></li><li><a href="global.html#getModuleItem">getModuleItem</a></li><li><a href="global.html#getModuleName">getModuleName</a></li><li><a href="global.html#getModuleVersion">getModuleVersion</a></li><li><a href="global.html#getOSLanguage">getOSLanguage</a></li><li><a href="global.html#getPlatform">getPlatform</a></li><li><a href="global.html#getRootDir">getRootDir</a></li><li><a href="global.html#getSupportedLanguage">getSupportedLanguage</a></li><li><a href="global.html#getSupportedLanguages">getSupportedLanguages</a></li><li><a href="global.html#getTrailerAfterDot">getTrailerAfterDot</a></li><li><a href="global.html#headerIncluded">headerIncluded</a></li><li><a href="global.html#I18nTools">I18nTools</a></li><li><a href="global.html#intlDir">intlDir</a></li><li><a href="global.html#IsExceedMaxDirectoryDepth">IsExceedMaxDirectoryDepth</a></li><li><a href="global.html#isFullPath">isFullPath</a></li><li><a href="global.html#isRootModule">isRootModule</a></li><li><a href="global.html#isSupportedLanguage">isSupportedLanguage</a></li><li><a href="global.html#mapArgs">mapArgs</a></li><li><a href="global.html#mapPercent">mapPercent</a></li><li><a href="global.html#maxDirectoryDepth">maxDirectoryDepth</a></li><li><a href="global.html#md5">md5</a></li><li><a href="global.html#md5Cache">md5Cache</a></li><li><a href="global.html#merge">merge</a></li><li><a href="global.html#mergeAll">mergeAll</a></li><li><a href="global.html#mergeBase">mergeBase</a></li><li><a href="global.html#mergeRecursiveBasic">mergeRecursiveBasic</a></li><li><a href="global.html#moduleFileResolve">moduleFileResolve</a></li><li><a href="global.html#open">open</a></li><li><a href="global.html#openFile">openFile</a></li><li><a href="global.html#openFileAsPlainString">openFileAsPlainString</a></li><li><a href="global.html#path">path</a></li><li><a href="global.html#pathArray">pathArray</a></li><li><a href="global.html#realPath">realPath</a></li><li><a href="global.html#resolveDependencies">resolveDependencies</a></li><li><a href="global.html#retrievePercentSymbol">retrievePercentSymbol</a></li><li><a href="global.html#showDotCount">showDotCount</a></li><li><a href="global.html#stripBom">stripBom</a></li><li><a href="global.html#typeOf">typeOf</a></li><li><a href="global.html#unsymbolLink">unsymbolLink</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">i18n-tools.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import moduleTools from './module-tools.js';
+import path from 'path';
+import fs from 'fs';
+import fileTools from './file-tools.js';
+import assert from 'assert';
+
+const ENGLISH = 'en';
+const PSEUDO_TAG = 'zz';
+let MY_ROOT = process.cwd();
+let INTL_DIR = path.join(MY_ROOT, 'intl');
+
+/**
+ * @param {string} lang Supported languages in CLDR notation
+ * Returns directory path for the language.
+ */
+let intlDir = (lang)=> {
+  lang = lang || ENGLISH;
+  return path.join(INTL_DIR, lang);
+};
+
+let KEY_HEADERS = ['msg'];
+
+const hashKeys = (path)=> {
+  let trailer = null;
+  return !(headerIncluded(path, KEY_HEADERS)
+  || (trailer = fileTools.getTrailerAfterDot(path)) === 'txt'
+  || trailer === 'json'
+  || trailer === 'yml'
+  || trailer === 'yaml'
+  || path.indexOf(PSEUDO_TAG) === 0);
+};
+
+/**
+ * verify name's header be allowed
+ * @param {string} name to be checked
+ * @param {Array} headersAllowed a list of strings to check
+ * @returns {boolean}
+ */
+let headerIncluded = (name, headersAllowed)=> {
+  let matched = false;
+  if (Array.isArray(headersAllowed)) {
+    headersAllowed.map(header => {
+      if (matched) return;
+      matched = (name.indexOf(header) === 0);
+    });
+  } else if (typeof headersAllowed === 'string') {
+    matched = (name.indexOf(headersAllowed) === 0);
+  }
+
+  return matched;
+};
+/**
+ * @param {string}rootPath
+ */
+const getRootDir = (rootPath)=> {
+  rootPath = rootPath || path.join(fileTools.getCurrentDir(), '..');
+  let validPath = true;
+  let rootStats;
+  try {
+    rootStats = fs.statSync(path.normalize(rootPath));
+  } catch (e) {
+    validPath = false;
+  }
+
+  assert(validPath, '*** setRootDir: Root path invalid: ' + rootPath);
+  if (!rootStats.isDirectory()) validPath = false;
+  assert(validPath,	'*** setRootDir: Root path is not a directory: ' + rootPath.toString());
+  let files = null;
+  try {
+    files = fs.readdirSync(rootPath);
+  } catch (e) {
+    validPath = false;
+  }
+
+  validPath = (validPath &amp;&amp; !!files);
+  if (validPath) {
+    let intlDirFound = false;
+    files.forEach(function (item) {
+      if (intlDirFound) return;
+      if (item === 'intl') intlDirFound = true;
+    });
+
+    validPath = intlDirFound;
+  }
+
+  assert(validPath,	'*** setRootDir: Intl dir not found under: ' + rootPath.toString());
+  return {
+    root: rootPath,
+    intl: path.join(rootPath, 'intl'),
+    cldr: path.join(rootPath, 'cldr'),
+    log: path.join(rootPath, 'logs'),
+  };
+};
+
+/**
+ * enumerate message sync
+ * @param {string}rootDir
+ * @param {boolean}checkNodeModules
+ * @param {Function}callback
+ */
+const enumerateMsgSync = (rootDir,  checkNodeModules, callback)=> {
+  moduleTools.enumerateFilesSync(rootDir, [], ['json'], checkNodeModules, callback);
+};
+
+/**
+ * Supported languages in CLDR notation
+ */
+const I18nTools = {
+  enumerateMsgSync,
+  getRootDir,
+  ENGLISH,
+  hashKeys,
+};
+
+export default I18nTools;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Mon Apr 03 2017 16:56:26 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
