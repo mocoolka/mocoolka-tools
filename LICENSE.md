@@ -1,6 +1,11 @@
 The MOCOOLKA-TOOLS is licensed under the MIT License.
+Copyright Mocoolka Corporation 2012-2017 and other contributors
 
-> Copyright (c) 2012-2017: mocoolka group
+The following license applies to all parts of this software except as
+documented below:
+
+====
+
 >
 > Permission is hereby granted, free of charge, to any person obtaining
 > a copy of this software and associated documentation files (the
@@ -20,3 +25,17 @@ The MOCOOLKA-TOOLS is licensed under the MIT License.
 > LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 > OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 > WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+====
+
+Copyright and related rights for sample code are waived via CC0. Sample
+code is defined as all source code contained within the doc directory.
+
+CC0: http://creativecommons.org/publicdomain/zero/1.0/
+
+====
+
+All files located in the node_modules and external directories are
+externally maintained libraries used by this software which have their
+own licenses; we recommend you read them, as their terms may differ from
+the terms above.

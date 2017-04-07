@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>mocoolka-tools-file-yml - Documentation</title>
+    <title>mocoolka-tools-validation - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">mocoolka-tools-file-yml</h1>
+    <h1 class="page-title">mocoolka-tools-validation</h1>
     
 
     
@@ -72,7 +72,7 @@
 
     
 
-    <h4 class="name" id="~open"><span class="type-signature">(inner) </span>open<span class="signature">(path, mode)</span><span class="type-signature"> &rarr; {Object|string}</span></h4>
+    <h4 class="name" id="~blank"><span class="type-signature">(inner) </span>blank<span class="signature">(value)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
 
@@ -84,7 +84,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_file_yml-tools.js.html">lib/file/yml-tools.js</a>, <a href="lib_file_yml-tools.js.html#line10">line 10</a>
+        <a href="lib_validation-tools.js.html">lib/validation-tools.js</a>, <a href="lib_validation-tools.js.html#line8">line 8</a>
     </li></ul></dd>
     
 
@@ -124,7 +124,7 @@
 
 
 <div class="description">
-    <p>open yml file</p>
+    <p>valid value empty</p>
 </div>
 
 
@@ -162,13 +162,22 @@
 
         <tr>
             
-                <td class="name"><code>path</code></td>
+                <td class="name"><code>value</code></td>
             
 
             <td class="type">
             
                 
+<span class="param-type">Array</span>
+|
+
 <span class="param-type">string</span>
+|
+
+<span class="param-type">number</span>
+|
+
+<span class="param-type">Object</span>
 
 
             
@@ -178,30 +187,7 @@
 
             
 
-            <td class="description last"><p>file path</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>mode</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>if mode is 'object' return object else return string</p></td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -232,10 +218,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Object</span>
-|
-
-<span class="param-type">string</span>
+<span class="param-type">boolean</span>
 
 
     </dd>

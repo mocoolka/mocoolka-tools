@@ -1,11 +1,12 @@
 {
   "name": "mocoolka-tools",
-  "version": "0.5.10",
+  "version": "0.5.11",
   "description": "mocoolka tool collection",
   "main": "./lib/index.js",
   "scripts": {
-     "test": "mocha --compilers js:babel-core/register ./test/*.js",
-    "jsdoc": "jsdoc -c jsdoc.json"
+    "test": "mocha --compilers js:babel-core/register ./test/*.js",
+    "jsdoc": "jsdoc -c jsdoc.json",
+    "importCldr": "node.exe -r babel-register ./src/util/app.js"
   },
   "keywords": [
     "mocoolka",
@@ -14,11 +15,14 @@
   "author": "fastspeeed",
   "license": "MIT",
   "dependencies": {
+    "cldr-data": "^31.0.1",
     "debug": "^2.2.0",
+    "globalize": "^1.2.3",
     "lodash": "^4.15.0",
     "md5": "^2.0.0",
     "mkdirp": "^0.5.1",
     "os-locale": "^1.4.0",
+    "winston": "^2.3.1",
     "yamljs": "^0.2.8"
   },
   "devDependencies": {

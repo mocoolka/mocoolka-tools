@@ -7,3 +7,5 @@ src
 docs
 jsdoc.json
 .jscsrc
+logs
+jsdoc.json

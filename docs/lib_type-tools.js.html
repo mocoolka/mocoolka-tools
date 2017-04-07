@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>mocoolka-tools-file-yml - Documentation</title>
+    <title>lib/type-tools.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,232 +27,364 @@
 
 <div id="main">
     
-    <h1 class="page-title">mocoolka-tools-file-yml</h1>
+    <h1 class="page-title">lib/type-tools.js</h1>
     
 
     
 
 
 
-
-<section>
-
-<header>
     
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id="~open"><span class="type-signature">(inner) </span>open<span class="signature">(path, mode)</span><span class="type-signature"> &rarr; {Object|string}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_file_yml-tools.js.html">lib/file/yml-tools.js</a>, <a href="lib_file_yml-tools.js.html#line10">line 10</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    <p>open yml file</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>path</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>file path</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>mode</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>if mode is 'object' return object else return string</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-|
-
-<span class="param-type">string</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Copyright Moccolka Corp. 2013,2016. All Rights Reserved.
+ *  Node module: mocoolka-tools
+ * This file is licensed under the MIT License.
+ * License text available at https://opensource.org/licenses/MIT
+ */
+import { objectTools, i18nTools } from '../index.js';
+/**
+ * Text
+ */
+class Text{
+  constructor(value) {
+    this.value = value;
+  };
+
+  toObject() {
+    return this.value;
+  };
+
+  toJSON() {
+    return this.toObject();
+  };
+
+}
+
+/**
+ * Text
+ */
+class Message{
+  constructor(messageKey, messageValue) {
+    this.messageKey = messageKey;
+    this.messageValue = messageValue;
+  };
+
+  setDefaultKey(defaultKey) {
+    this.messageKey = this.messageKey || defaultKey;
+  };
+
+  setMessageValue(messageValue) {
+    this.messageValue = objectTools.merge(this.messageValue, messageValue);
+  };
+
+  valid() {
+    return true;
+  };
+
+  toString() {
+    return this.messageKey.toUpperCase()+ ":" + i18nTools.formatMessage(this.messageKey,this.messageValue);
+  };
+
+  toObject() {
+    return this.value;
+  };
+
+  toJSON() {
+    return this.toObject();
+  };
+}
+
+class JSON{
+  constructor(value) {
+    this.value = value;
+  };
+
+  toObject() {
+    return this.value;
+  };
+
+  toJSON() {
+    return this.toObject();
+  }
+}
+
+class Any{
+  constructor(value) {
+    this.value = value;
+  };
+
+  toObject() {
+    return this.value;
+  };
+
+  toJSON() {
+    return this.toObject();
+  }
+}
+
+const promiseExists = typeof Promise === 'function';
+const globalObject = typeof window !== 'undefined' ?
+  window : typeof global !== 'undefined' ? global : self;
+const isDom = 'location' in globalObject &amp;&amp; 'document' in globalObject;
+const symbolExists = typeof Symbol !== 'undefined';
+const mapExists = typeof Map !== 'undefined';
+const setExists = typeof Set !== 'undefined';
+const weakMapExists = typeof WeakMap !== 'undefined';
+const weakSetExists = typeof WeakSet !== 'undefined';
+const dataViewExists = typeof DataView !== 'undefined';
+const symbolIteratorExists = symbolExists &amp;&amp; typeof Symbol.iterator !== 'undefined';
+const symbolToStringTagExists = symbolExists &amp;&amp; typeof Symbol.toStringTag !== 'undefined';
+const setEntriesExists = setExists &amp;&amp; typeof Set.prototype.entries === 'function';
+const mapEntriesExists = mapExists &amp;&amp; typeof Map.prototype.entries === 'function';
+const setIteratorPrototype = setEntriesExists &amp;&amp; Object.getPrototypeOf(new Set().entries());
+const mapIteratorPrototype = mapEntriesExists &amp;&amp; Object.getPrototypeOf(new Map().entries());
+const arrayIteratorExists = symbolIteratorExists &amp;&amp;
+  typeof Array.prototype[Symbol.iterator] === 'function';
+const arrayIteratorPrototype = arrayIteratorExists &amp;&amp; Object.getPrototypeOf([][Symbol.iterator]());
+const stringIteratorExists = symbolIteratorExists &amp;&amp;
+  typeof Array.prototype[Symbol.iterator] === 'function';
+const stringIteratorPrototype = stringIteratorExists &amp;&amp;
+  Object.getPrototypeOf(''[Symbol.iterator]());
+const toStringLeftSliceLength = 8;
+const toStringRightSliceLength = -1;
+/**
+ * ### typeOf (obj)
+ *
+ * Uses `Object.prototype.toString` to determine the type of an object,
+ *
+ * @param {*} object
+ * @return {string} object type
+ */
+const typeDetect = (obj)=> {
+
+  const typeofObj = typeof obj;
+  if (typeofObj !== 'object') {
+    return typeofObj;
+  }
+
+  if (obj === null) {
+    return 'null';
+  }
+
+  if (obj === globalObject) {
+    return 'global';
+  }
+
+  if (Array.isArray(obj)) {
+    return 'Array';
+  }
+
+  if (isDom) {
+    if (obj === globalObject.location) {
+      return 'Location';
+    }
+
+    if (obj === globalObject.document) {
+      return 'Document';
+    }
+
+    if (obj === (globalObject.navigator || {}).mimeTypes) {
+      return 'MimeTypeArray';
+    }
+
+    if (obj === (globalObject.navigator || {}).plugins) {
+      return 'PluginArray';
+    }
+
+    if (obj instanceof HTMLElement &amp;&amp; obj.tagName === 'BLOCKQUOTE') {
+      return 'HTMLQuoteElement';
+    }
+
+    if (obj instanceof HTMLElement &amp;&amp; obj.tagName === 'TD') {
+      return 'HTMLTableDataCellElement';
+    }
+
+    if (obj instanceof HTMLElement &amp;&amp; obj.tagName === 'TH') {
+      return 'HTMLTableHeaderCellElement';
+    }
+  }
+
+  var stringTag = (symbolToStringTagExists &amp;&amp; obj[Symbol.toStringTag]);
+  if (typeof stringTag === 'string') {
+    return stringTag;
+  }
+
+  var objPrototype = Object.getPrototypeOf(obj);
+
+  for (let customerType in customerTypes) {
+    if (customerTypes[customerType].prototype === objPrototype) {
+      return customerTypes[customerType].name;
+    }
+  }
+
+  console.log(objPrototype);
+  if (objPrototype === RegExp.prototype) {
+    return 'RegExp';
+  }
+
+  if (objPrototype === Date.prototype) {
+    return 'Date';
+  }
+
+  if (promiseExists &amp;&amp; objPrototype === Promise.prototype) {
+    return 'Promise';
+  }
+
+  if (setExists &amp;&amp; objPrototype === Set.prototype) {
+    return 'Set';
+  }
+
+  if (mapExists &amp;&amp; objPrototype === Map.prototype) {
+    return 'Map';
+  }
+
+  if (weakSetExists &amp;&amp; objPrototype === WeakSet.prototype) {
+    return 'WeakSet';
+  }
+
+  if (weakMapExists &amp;&amp; objPrototype === WeakMap.prototype) {
+    return 'WeakMap';
+  }
+
+  if (dataViewExists &amp;&amp; objPrototype === DataView.prototype) {
+    return 'DataView';
+  }
+
+  if (mapExists &amp;&amp; objPrototype === mapIteratorPrototype) {
+    return 'Map Iterator';
+  }
+
+  if (setExists &amp;&amp; objPrototype === setIteratorPrototype) {
+    return 'Set Iterator';
+  }
+
+  if (arrayIteratorExists &amp;&amp; objPrototype === arrayIteratorPrototype) {
+    return 'Array Iterator';
+  }
+
+  if (stringIteratorExists &amp;&amp; objPrototype === stringIteratorPrototype) {
+    return 'String Iterator';
+  }
+
+  if (objPrototype === null) {
+    return 'Object';
+  }
+
+  console.log(Object
+ .prototype
+ .toString
+ .call(obj));
+  return Object
+ .prototype
+ .toString
+ .call(obj)
+ .slice(toStringLeftSliceLength, toStringRightSliceLength);
+};
+
+const dataTypeDetect = (obj)=> {
+  const typeofObj = typeof obj;
+  if (typeofObj !== 'object') {
+    if (typeofObj === 'undefined')
+      return null;
+    return [typeofObj];
+  }
+
+  if (obj === null) {
+    return null;
+  }
+
+  let objPrototype = Object.getPrototypeOf(obj);
+  let result = [];
+  for (let dataType in dataTypes) {
+    if (dataTypes[dataType].prototype === objPrototype) {
+      result.push(dataType);
+    }
+  }
+
+  if (result.length == 0)
+  return null;
+  return result;
+};
+
+const dataTypeValid = (obj, typeName)=> {
+  let type = dataTypeDetect(obj);
+  if (type === null) {
+    if (typeName === null)
+      return true;
+    else
+      return false;
+  }
+
+  return type.includes(typeName);
+};
+
+const typeValid = (obj, typeName)=> {
+  let type = typeDetect(obj);
+  return type === typeName;
+};
+
+const  customerTypes = {
+  Text,
+  JSON,
+  Any,
+  Message,
+};
+const  baseTypes = {
+  String,
+  Number,
+  Boolean,
+  Date,
+  Array,
+  Buffer,
+  Binary: Buffer,
+  Object,
+
+};
+
+const initType = ()=> {
+  for (let t in customerTypes) {
+    registerDataType(customerTypes[t]);
+  }
+
+  for (let t in baseTypes) {
+    registerDataType(baseTypes[t], [t]);
+  }
+};
+
+const registerDataType = (type, names)=> {
+  names = names || [];
+  names = names.concat([type.name]);
+
+  names.map(name=> {
+    dataTypes[name.toLowerCase()] = type;
+  });
+};
+
+const registerCustomerType = (type, names)=> {
+  customerTypes[type.name] = type;
+  registerDataType(type, names);
+};
+
+const dataTypes = {
+};
+initType();
+export default{
+  dataTypes,
+  typeDetect,
+  typeValid,
+  Text,
+  JSON,
+  Any,
+  Message,
+  dataTypeDetect,
+  dataTypeValid,
+};
+
+</code></pre>
+        </article>
+    </section>
 
 
 
@@ -262,7 +394,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Apr 06 2017 18:35:03 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Apr 06 2017 18:35:02 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

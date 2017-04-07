@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>mocoolka-tools-file-yml - Documentation</title>
+    <title>lib/error-tools.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,232 +27,136 @@
 
 <div id="main">
     
-    <h1 class="page-title">mocoolka-tools-file-yml</h1>
+    <h1 class="page-title">lib/error-tools.js</h1>
     
 
     
 
 
 
-
-<section>
-
-<header>
     
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id="~open"><span class="type-signature">(inner) </span>open<span class="signature">(path, mode)</span><span class="type-signature"> &rarr; {Object|string}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_file_yml-tools.js.html">lib/file/yml-tools.js</a>, <a href="lib_file_yml-tools.js.html#line10">line 10</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    <p>open yml file</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>path</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>file path</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>mode</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>if mode is 'object' return object else return string</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-|
-
-<span class="param-type">string</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** @module mocoolka-tools-error */
+import { fileTools, cldrTools, validTools, typeTools, i18nTools } from '../index.js';
+
+class MKError extends Error {
+  constructor(...args) {
+    super(...args);
+    Object.defineProperty(this, "name", {
+      value: this.constructor.name
+    });
+    Error.captureStackTrace(this, this.constructor);
+  }
+  /*constructor (message, extra) {
+    super();
+    Error.captureStackTrace(this, this.constructor);
+   // this.name = 'MKError';
+    this.message = message;
+    if (extra) this.extra = extra;
+  }*/
+}
+
+/**
+ *  param must can't be blank
+ * @param {string|number|Array}param - param will be valid
+ * @param {string} variableName -  variableName
+ */
+const paramRequired = (param, variableName)=> {
+  if (validTools.blank(param)) {
+    paramRequired(variableName, 'variableName');
+    throwError('error.presence', { variableName: variableName });
+  }
+};
+
+const getMessageValue = (messageValue, mustMessageValue)=> {
+  if (typeTools.dataTypeValid(messageValue, 'object')) {
+    if (mustMessageValue === null) {
+      type(mustMessageValue, 'array');
+      mustMessageValue.map(value=> {
+        paramRequired(messageValue[value], { variableName: value });
+      });
+    }
+  }else {
+    mustMessageValue.map(value=> {
+      paramRequired(null, { variableName: value });
+    });
+  }
+};
+
+const validMessage = (message, defaultKey, valueCount)=> {
+  if (validTools.blank(message) &amp;&amp; valueCount) {
+    throwError('type', { expected: typeName, actual: typeTools.dataTypeDetect(value) });
+  }
+};
+
+const dataType = (value, typeName, variableName)=> {
+  if (!typeTools.dataTypeValid(value, typeName)) {
+    paramRequired(variableName, 'variableName');
+    throwError('error.type', { variableName: variableName,
+      expected: typeName, actual: typeTools.dataTypeDetect(value), });
+  }
+};
+
+const type = (value, typeName, variableName)=> {
+  if (!typeTools.typeValid(value, typeName)) {
+    paramRequired(variableName, 'variableName');
+    throwError('error.type', { variableName: variableName,
+      expected: typeName, actual: typeTools.dataTypeDetect(value), });
+  }
+};
+
+const directoryNotExist = (path)=> {
+  paramRequired(path, 'path');
+  if (fileTools.directoryExist(path) === false) {
+    throwError('error.directoryNotExist', { path: path });
+  }
+};
+
+const languageNotSupport = (language)=> {
+  paramRequired(language, 'language');
+  if (!cldrTools.isSupportedLanguage(language)) {
+    throwError('error.languageNotSupport',
+      { language, supportLanguages: cldrTools.getSupportedLanguages() });
+  }
+};
+
+const notInit = (init, moduleName, initFunction) => {
+  if (init !== true) {
+    throwError('error.notInit',
+      { moduleName, initFunction });
+  }
+}
+
+const throwError = (defaultMesssageKey, defaultMessageValue) => {
+  let errorMessage = getErrorMessage(defaultMesssageKey, defaultMessageValue);
+
+
+  let error = new Error(errorMessage);
+  error.code = defaultMesssageKey;
+  throw  error;
+};
+
+const getErrorMessage = (defaultMesssageKey, defaultMessageValue) => {
+
+  let message = new typeTools.Message(defaultMesssageKey, defaultMessageValue);
+
+  return message;
+};
+
+export default {
+  paramRequired,
+  directoryNotExist,
+  languageNotSupport,
+  getErrorMessage,
+  throwError,
+  type,
+  notInit,
+  dataType,
+};
+</code></pre>
+        </article>
+    </section>
 
 
 
@@ -262,7 +166,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Apr 06 2017 18:35:03 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Apr 06 2017 18:35:02 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

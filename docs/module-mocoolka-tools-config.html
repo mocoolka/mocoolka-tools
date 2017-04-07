@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>mocoolka-tools-file-yml - Documentation</title>
+    <title>mocoolka-tools-config - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">mocoolka-tools-file-yml</h1>
+    <h1 class="page-title">mocoolka-tools-config</h1>
     
 
     
@@ -72,7 +72,7 @@
 
     
 
-    <h4 class="name" id="~open"><span class="type-signature">(inner) </span>open<span class="signature">(path, mode)</span><span class="type-signature"> &rarr; {Object|string}</span></h4>
+    <h4 class="name" id="~getAppConfig"><span class="type-signature">(inner) </span>getAppConfig<span class="signature">(nodeName<span class="signature-attributes">opt</span>, rootPath<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 
     
 
@@ -84,7 +84,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_file_yml-tools.js.html">lib/file/yml-tools.js</a>, <a href="lib_file_yml-tools.js.html#line10">line 10</a>
+        <a href="lib_config-tools.js.html">lib/config-tools.js</a>, <a href="lib_config-tools.js.html#line69">line 69</a>
     </li></ul></dd>
     
 
@@ -124,7 +124,203 @@
 
 
 <div class="description">
-    <p>open yml file</p>
+    <p>get appConfig</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>nodeName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>node name in appConfig</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>rootPath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>root path contain file app.mk-config.json</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~getConfig"><span class="type-signature">(inner) </span>getConfig<span class="signature">(configName, itemName)</span><span class="type-signature"> &rarr; {null|Object|string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_config-tools.js.html">lib/config-tools.js</a>, <a href="lib_config-tools.js.html#line36">line 36</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>get config value</p>
 </div>
 
 
@@ -162,7 +358,7 @@
 
         <tr>
             
-                <td class="name"><code>path</code></td>
+                <td class="name"><code>configName</code></td>
             
 
             <td class="type">
@@ -178,14 +374,14 @@
 
             
 
-            <td class="description last"><p>file path</p></td>
+            <td class="description last"><p>node name in root node</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>mode</code></td>
+                <td class="name"><code>itemName</code></td>
             
 
             <td class="type">
@@ -201,7 +397,7 @@
 
             
 
-            <td class="description last"><p>if mode is 'object' return object else return string</p></td>
+            <td class="description last"><p>property name in node .if value is null return node object</p></td>
         </tr>
 
     
@@ -232,10 +428,242 @@
     </dt>
     <dd>
         
+<span class="param-type">null</span>
+|
+
 <span class="param-type">Object</span>
 |
 
 <span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~setConfig"><span class="type-signature">(inner) </span>setConfig<span class="signature">(configName, defaultConfig, useConfig<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_config-tools.js.html">lib/config-tools.js</a>, <a href="lib_config-tools.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>set config value.it will try read app.mk-config.json in root directory</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>configName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>node name in app.mk-config.json</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>defaultConfig</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>default config</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>useConfig</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>user define config</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>merge with defaultConfig appConfig userConfig</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
 
 
     </dd>
@@ -262,7 +690,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Apr 06 2017 18:35:03 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Apr 06 2017 18:35:02 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

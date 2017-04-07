@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>mocoolka-tools-file-yml - Documentation</title>
+    <title>lib/file/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,232 +27,168 @@
 
 <div id="main">
     
-    <h1 class="page-title">mocoolka-tools-file-yml</h1>
+    <h1 class="page-title">lib/file/index.js</h1>
     
 
     
 
 
 
-
-<section>
-
-<header>
     
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id="~open"><span class="type-signature">(inner) </span>open<span class="signature">(path, mode)</span><span class="type-signature"> &rarr; {Object|string}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_file_yml-tools.js.html">lib/file/yml-tools.js</a>, <a href="lib_file_yml-tools.js.html#line10">line 10</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    <p>open yml file</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>path</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>file path</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>mode</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>if mode is 'object' return object else return string</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-|
-
-<span class="param-type">string</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+import i18n from './lib/i18n.js';
+import { i18nTools, cldrTools, objectTools } from 'mocoolka-tools';
+
+let instance = null;
+
+/**
+ * I18n class
+ */
+class I18n{
+
+  /**
+   * if instance not created then new instance
+   * @param {string} rootDir -root directory that must contain intl
+   * @param {Object} options
+   * @returns {Object}
+   */
+  static newInstance(rootDir, options) {
+    if (instance == null) {
+      instance = new I18n(rootDir, options);
+    }
+
+    return instance;
+  }
+
+  constructor(rootDir, options) {
+    let dirs = i18nTools.getRootDir(rootDir);
+    i18n.setDefaultLanguage(null, dirs);
+    let glb = i18n.checkGlb();
+    let defaults = {
+      language: glb.DEFAULT_LANG,
+    };
+    this._options = objectTools.merge(defaults, options);
+  }
+
+  setRootDir(rootDir, options) {
+    let defaults = {};
+    /* var defaults = {
+       autonomousMsgLoading: helper.AML_DEFAULT,
+     };*/
+    options = objectTools.merage(defaults, options);
+    /*  options.autonomousMsgLoading =
+        helper.validateAmlValue(options.autonomousMsgLoading);
+      if (!options.autonomousMsgLoading) {
+        options.autonomousMsgLoading = defaults.autonomousMsgLoading;
+      }*/
+    let dirs = I18nTools.getRootDir(rootDir);
+    let glb = i18n.checkGlb();
+
+    //global.MOCOOLKA_GLB.AUTO_MSG_LOADING = options.autonomousMsgLoading;
+    // }
+    /*  if (path.resolve(rootDir) !==
+        path.resolve(global.MOCOOLKA_GLB.MASTER_ROOT_DIR) &amp;&amp;
+        helper.isLoadMessages(rootDir)) {
+        var langs = Object.keys(global.MOCOOLKA_GLB.bundles);
+        langs.forEach(lang =>{
+          translate.loadMsgFromFile(lang, rootDir);
+        });
+      }*/
+  }
+
+  setDefaultLanguage(lang) {
+    return i18n.setDefaultLanguage(lang);
+  }
+
+  setPersistentLogging(logFn, disableConsole) {
+    i18n.setPersistentLogging(logFn, disableConsole);
+  }
+
+
+
+  getLanguage () {
+    return this._options.language;
+  };
+
+  formatCurrency(value, currencySymbol, options) {
+    i18n.loadGlobalize(this._options.language);
+    return i18n.formatCurrency(value, currencySymbol, options,
+      this._options.language);
+  };
+
+  formatDate (value, options) {
+    i18n.loadGlobalize(this._options.language);
+    return i18n.formatDate(value, options, this._options.language);
+  };
+
+  formatNumber (value, options) {
+    i18n.loadGlobalize(this._options.language);
+    return i18n.formatNumber(value, options, this._options.language);
+  };
+
+  plural(value, options) {
+    i18n.loadGlobalize(this._options.language);
+    return i18n.plural(value, options, this._options.language);
+  }
+
+  formatRelativeTime (value, unit, options) {
+    i18n.loadGlobalize(this._options.language);
+    return i18n.formatRelativeTime(value, unit, options, this._options.language);
+  };
+
+  formatUnit (value, unit, options) {
+    i18n.loadGlobalize(this._options.language);
+    return i18n.formatUnit(value, unit, options, this._options.language);
+  };
+
+  formatMessage (messageKey, options) {
+    i18n.loadGlobalize(this._options.language);
+    return i18n.formatDefineMessage(messageKey, options, this._options.language);
+  };
+
+  formatDefineMessage (path, variables) {
+    i18n.loadGlobalize(this._options.language);
+    return i18n.formatMessage(path, variables, this._options.language);
+  };
+
+  Error  () {
+    i18n.loadGlobalize(this._options.language);
+    let msg = i18n.packMessage(arguments, null, true,
+      this._options.language);
+    i18n.logPersistent('error', msg);
+    return Error(msg.message);
+  };
+
+  format  () {
+    i18n.loadGlobalize(this._options.language);
+    return i18n.packMessage(arguments, null,
+      false, this._options.language);
+  };
+
+  ewrite  () {
+    i18n.loadGlobalize(this._options.language);
+    return i18n.packMessage(arguments, (msg)=> {
+      i18n.logPersistent(msg, 'error');
+      if (i18n.consoleEnabled()) process.stderr.write(msg.message);
+    }, true, this._options.language);
+  };
+
+  owrite  () {
+    i18n.loadGlobalize(this._options.language);
+    return i18n.packMessage(arguments, (msg)=> {
+      i18n.logPersistent(msg, 'error');
+      if (i18n.consoleEnabled()) process.stdout.write(msg.message);
+    }, true, this._options.language);
+  };
+
+}
+export default I18n.newInstance;
+
+</code></pre>
+        </article>
+    </section>
 
 
 
@@ -262,7 +198,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Apr 06 2017 18:35:03 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Apr 06 2017 18:35:02 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
