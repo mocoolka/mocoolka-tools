@@ -1,0 +1,396 @@
+[2017-04-15 15:05:47.534] [INFO] [default] - { language: 'en',
+  message: 'Mocoolka persistent logging started',
+  orig: 'Mocoolka persistent logging started',
+  vars: [] }
+[2017-04-15 15:05:47.561] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:05:47.562] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:05:47.563] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:05:47.564] [ERROR] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:05:47.564] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:05:47.565] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:05:47.565] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:05:47.566] [DEBUG] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:08.533] [INFO] [default] - { language: 'en',
+  message: 'Mocoolka persistent logging started',
+  orig: 'Mocoolka persistent logging started',
+  vars: [] }
+[2017-04-15 15:13:08.560] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:08.562] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:08.563] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:08.564] [ERROR] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:08.564] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:08.565] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:08.565] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:08.566] [DEBUG] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:33.210] [INFO] [default] - { language: 'en',
+  message: 'Mocoolka persistent logging started',
+  orig: 'Mocoolka persistent logging started',
+  vars: [] }
+[2017-04-15 15:13:33.238] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:33.239] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:33.239] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:33.240] [ERROR] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:33.240] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:33.241] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:33.243] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:13:33.244] [DEBUG] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:18:07.086] [INFO] [default] - { language: 'en',
+  message: 'Mocoolka persistent logging started',
+  orig: 'Mocoolka persistent logging started',
+  vars: [] }
+[2017-04-15 15:18:07.114] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:18:07.115] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:18:07.116] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:18:07.116] [ERROR] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:18:07.117] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:18:07.117] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:18:07.118] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:18:07.119] [DEBUG] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:20:02.987] [INFO] [default] - { language: 'en',
+  message: 'Mocoolka persistent logging started',
+  orig: 'Mocoolka persistent logging started',
+  vars: [] }
+[2017-04-15 15:20:03.012] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:20:03.013] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:20:03.013] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:20:03.014] [ERROR] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:20:03.014] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:20:03.016] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:20:03.017] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:20:03.017] [DEBUG] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:21:51.964] [INFO] [default] - { language: 'en',
+  message: 'Mocoolka persistent logging started',
+  orig: 'Mocoolka persistent logging started',
+  vars: [] }
+[2017-04-15 15:21:51.990] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:21:51.991] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:21:51.991] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:21:51.992] [ERROR] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:21:51.993] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:21:51.993] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:21:51.994] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:21:51.995] [DEBUG] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:55:53.102] [INFO] [default] - { language: 'en',
+  message: 'Mocoolka persistent logging started',
+  orig: 'Mocoolka persistent logging started',
+  vars: [] }
+[2017-04-15 15:55:53.130] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:55:53.131] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:55:53.131] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:55:53.132] [ERROR] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:55:53.133] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:55:53.134] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:55:53.134] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:55:53.135] [DEBUG] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:59:21.283] [INFO] [default] - { language: 'en',
+  message: 'Mocoolka persistent logging started',
+  orig: 'Mocoolka persistent logging started',
+  vars: [] }
+[2017-04-15 15:59:21.311] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:59:21.312] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:59:21.312] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:59:21.313] [ERROR] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:59:21.314] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:59:21.314] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:59:21.315] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 15:59:21.316] [DEBUG] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 16:01:02.099] [INFO] [default] - { language: 'en',
+  message: 'Mocoolka persistent logging started',
+  orig: 'Mocoolka persistent logging started',
+  vars: [] }
+[2017-04-15 16:01:02.126] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 16:01:02.127] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 16:01:02.127] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 16:01:02.128] [ERROR] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 16:01:02.129] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 16:01:02.129] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 16:01:02.130] [INFO] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }
+[2017-04-15 16:01:02.131] [DEBUG] [default] - { language: 'zh-Hans',
+  messageKey: 'error/E-NOT-BLANK',
+  messageValue: undefined,
+  message: '变量不能为空值',
+  origianlMessage: 'variable can\'t be blank' }

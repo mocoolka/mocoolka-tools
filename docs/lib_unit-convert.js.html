@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/unit-convert.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-mocoolka-tools-type-Message.html">Message</a></li><li><a href="module-mocoolka-tools-type-Text.html">Text</a></li></ul><h3>Modules</h3><ul><li><a href="module-mocoolka-tools.html">mocoolka-tools</a></li><li><a href="module-mocoolka-tools-array.html">mocoolka-tools-array</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-array.html#~getArrayFromArrayByOrder">getArrayFromArrayByOrder</a></li><li data-type='method'><a href="module-mocoolka-tools-array.html#~uniquenessArray">uniquenessArray</a></li></ul></li><li><a href="module-mocoolka-tools-env.html">mocoolka-tools-env</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-env.html#~appLanguage">appLanguage</a></li></ul></li><li><a href="module-mocoolka-tools-error.html">mocoolka-tools-error</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-error.html#~directoryNotExist">directoryNotExist</a></li><li data-type='method'><a href="module-mocoolka-tools-error.html#~errorHandler">errorHandler</a></li><li data-type='method'><a href="module-mocoolka-tools-error.html#~fileNotExist">fileNotExist</a></li><li data-type='method'><a href="module-mocoolka-tools-error.html#~paramRequired">paramRequired</a></li><li data-type='method'><a href="module-mocoolka-tools-error.html#~throwError">throwError</a></li><li data-type='method'><a href="module-mocoolka-tools-error.html#~throwParseFileError">throwParseFileError</a></li><li data-type='method'><a href="module-mocoolka-tools-error.html#~type">type</a></li><li data-type='method'><a href="module-mocoolka-tools-error.html#~validateJsonSchema">validateJsonSchema</a></li></ul></li><li><a href="module-mocoolka-tools-file.html">mocoolka-tools-file</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file.html#~createDirNotExist">createDirNotExist</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~deleteDirExist">deleteDirExist</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~deleteFile">deleteFile</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~directoryDepth">directoryDepth</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~directoryExist">directoryExist</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~fileExist">fileExist</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~getFileExtName">getFileExtName</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~getFileName">getFileName</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~getMKFileExtName">getMKFileExtName</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~getMKFileName">getMKFileName</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~IsExceedMaxDirectoryDepth">IsExceedMaxDirectoryDepth</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~isFullPath">isFullPath</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~maxDirectoryDepth">maxDirectoryDepth</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~openFile">openFile</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~openFileAsPlainString">openFileAsPlainString</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~path">path</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~pathArray">pathArray</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~realPath">realPath</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~saveFile">saveFile</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~stripBom">stripBom</a></li><li data-type='method'><a href="module-mocoolka-tools-file.html#~unsymbolLink">unsymbolLink</a></li></ul></li><li><a href="module-mocoolka-tools-file-js.html">mocoolka-tools-file-js</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file-js.html#~open">open</a></li><li data-type='method'><a href="module-mocoolka-tools-file-js.html#~openFileAsPlainString">openFileAsPlainString</a></li></ul></li><li><a href="module-mocoolka-tools-file-json.html">mocoolka-tools-file-json</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file-json.html#~open">open</a></li><li data-type='method'><a href="module-mocoolka-tools-file-json.html#~openFileAsPlainString">openFileAsPlainString</a></li></ul></li><li><a href="module-mocoolka-tools-file-yml.html">mocoolka-tools-file-yml</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-file-yml.html#~open">open</a></li><li data-type='method'><a href="module-mocoolka-tools-file-yml.html#~openFileAsPlainString">openFileAsPlainString</a></li></ul></li><li><a href="module-mocoolka-tools-format.html">mocoolka-tools-format</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-format.html#~mapArgs">mapArgs</a></li><li data-type='method'><a href="module-mocoolka-tools-format.html#~mapPercent">mapPercent</a></li><li data-type='method'><a href="module-mocoolka-tools-format.html#~retrievePercentSymbol">retrievePercentSymbol</a></li></ul></li><li><a href="module-mocoolka-tools-global.html">mocoolka-tools-global</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-global.html#~getGlobal">getGlobal</a></li><li data-type='method'><a href="module-mocoolka-tools-global.html#~setGlobalItem">setGlobalItem</a></li></ul></li><li><a href="module-mocoolka-tools-iterator.html">mocoolka-tools-iterator</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-iterator.html#~iterator">iterator</a></li></ul></li><li><a href="module-mocoolka-tools-module.html">mocoolka-tools-module</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-module.html#~enumerateFilesSync">enumerateFilesSync</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~enumerateFilesSyncPriv">enumerateFilesSyncPriv</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~fileSyncScanned">fileSyncScanned</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~getModuleItem">getModuleItem</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~getModuleName">getModuleName</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~getModuleVersion">getModuleVersion</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~isRootModule">isRootModule</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~moduleFileResolve">moduleFileResolve</a></li><li data-type='method'><a href="module-mocoolka-tools-module.html#~resolveDependencies">resolveDependencies</a></li></ul></li><li><a href="module-mocoolka-tools-object.html">mocoolka-tools-object</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-object.html#~clone">clone</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~diff">diff</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~merge">merge</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~mergeAll">mergeAll</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~mergeBase">mergeBase</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~mergeRecursiveBasic">mergeRecursiveBasic</a></li><li data-type='method'><a href="module-mocoolka-tools-object.html#~typeOf">typeOf</a></li></ul></li><li><a href="module-mocoolka-tools-os.html">mocoolka-tools-os</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-os.html#~getOSLanguage">getOSLanguage</a></li><li data-type='method'><a href="module-mocoolka-tools-os.html#~getPlatform">getPlatform</a></li></ul></li><li><a href="module-mocoolka-tools-service.html">mocoolka-tools-service</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-service.html#~standClient">standClient</a></li><li data-type='method'><a href="module-mocoolka-tools-service.html#~standClientPromise">standClientPromise</a></li><li data-type='method'><a href="module-mocoolka-tools-service.html#~standService">standService</a></li><li data-type='method'><a href="module-mocoolka-tools-service.html#~standServices">standServices</a></li></ul></li><li><a href="module-mocoolka-tools-string.html">mocoolka-tools-string</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-string.html#~format">format</a></li><li data-type='method'><a href="module-mocoolka-tools-string.html#~md5">md5</a></li><li data-type='method'><a href="module-mocoolka-tools-string.html#~md5Cache">md5Cache</a></li></ul></li><li><a href="module-mocoolka-tools-time.html">mocoolka-tools-time</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-time.html#~executeDelay">executeDelay</a></li></ul></li><li><a href="module-mocoolka-tools-transform.html">mocoolka-tools-transform</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-transform.html#~jsonItemsToProp">jsonItemsToProp</a></li><li data-type='method'><a href="module-mocoolka-tools-transform.html#~objectToString">objectToString</a></li><li data-type='method'><a href="module-mocoolka-tools-transform.html#~transformJsonWithMap">transformJsonWithMap</a></li><li data-type='method'><a href="module-mocoolka-tools-transform.html#~transformToXml">transformToXml</a></li></ul></li><li><a href="module-mocoolka-tools-type.html">mocoolka-tools-type</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-type.html#~isArray">isArray</a></li><li data-type='method'><a href="module-mocoolka-tools-type.html#~isBoolean">isBoolean</a></li><li data-type='method'><a href="module-mocoolka-tools-type.html#~isDate">isDate</a></li><li data-type='method'><a href="module-mocoolka-tools-type.html#~isEmpty">isEmpty</a></li><li data-type='method'><a href="module-mocoolka-tools-type.html#~isFunction">isFunction</a></li><li data-type='method'><a href="module-mocoolka-tools-type.html#~isMessage">isMessage</a></li><li data-type='method'><a href="module-mocoolka-tools-type.html#~isNull">isNull</a></li><li data-type='method'><a href="module-mocoolka-tools-type.html#~isNumber">isNumber</a></li><li data-type='method'><a href="module-mocoolka-tools-type.html#~isObject">isObject</a></li><li data-type='method'><a href="module-mocoolka-tools-type.html#~isString">isString</a></li><li data-type='method'><a href="module-mocoolka-tools-type.html#~isUndefined">isUndefined</a></li><li data-type='method'><a href="module-mocoolka-tools-type.html#~typeDetect">typeDetect</a></li></ul></li><li><a href="module-mocoolka-tools-unit-convert.html">mocoolka-tools-unit-convert</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-unit-convert.html#~convert">convert</a></li></ul></li><li><a href="module-mocoolka-tools-validation.html">mocoolka-tools-validation</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-validation.html#~blank">blank</a></li><li data-type='method'><a href="module-mocoolka-tools-validation.html#~validateJsonSchema">validateJsonSchema</a></li></ul></li><li><a href="module-mocoolka-watch-file.html">mocoolka-watch-file</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-watch-file.html#~watchDirectory">watchDirectory</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">lib/unit-convert.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// © Copyright Mocoolka Corporation 2015,2017.
+// Node module: mocoolka-tools
+// LICENSE: MIT
+/** @module mocoolka-tools-unit-convert */
+const convertUnit = require('./unit/lib/index.js');
+const errorTools = require('./error-tools.js');
+const directions = [
+  {
+    name: 'NE',
+    min: 22.5,
+    max: 67.5,
+  },
+  {
+    name: 'E',
+    min: 67.5,
+    max: 112.5,
+  },
+  {
+    name: 'SE',
+    min: 112.5,
+    max: 157.5,
+  },
+  {
+    name: 'S',
+    min: 157.5,
+    max: 202.5,
+  },
+  {
+    name: 'SW',
+    min: 202.5,
+    max: 247.5,
+  },
+  {
+    name: 'W',
+    min: 247.5,
+    max: 292.5,
+  },
+  {
+    name: 'NW',
+    min: 292.5,
+    max: 337.5,
+  },
+  {
+    name: 'N',
+    min: 337.5,
+    max: 360,
+  },
+  {
+    name: 'N',
+    min: 0,
+    max: 22.5,
+  },
+];
+const windLevel = [
+  {
+    name: 0,
+    min: 0,
+    max: 0.2,
+  },
+  {
+    name: 1,
+    min: 0.2,
+    max: 1.5,
+  },
+  {
+    name: 2,
+    min: 1.5,
+    max: 3.3,
+  },
+  {
+    name: 3,
+    min: 3.3,
+    max: 5.4,
+  },
+  {
+    name: 4,
+    min: 5.4,
+    max: 7.9,
+  },
+  {
+    name: 5,
+    min: 7.9,
+    max: 10.7,
+  },
+  {
+    name: 6,
+    min: 10.7,
+    max: 13.8,
+  },
+  {
+    name: 7,
+    min: 13.8,
+    max: 17.1,
+  },
+  {
+    name: 8,
+    min: 17.1,
+    max: 20.8,
+  },
+  {
+    name: 9,
+    min: 20.8,
+    max: 24.5,
+  },
+  {
+    name: 10,
+    min: 24.5,
+    max: 28.4,
+  },
+  {
+    name: 11,
+    min: 28.4,
+    max: 32.6,
+  },
+  {
+    name: 12,
+    min: 32.6,
+    max: 100000000,
+  },
+];
+
+const covertToWindLevel = (value)=> {
+
+  for (let [index, elem] of windLevel.entries()) {
+    if (value >= elem.min &amp;&amp; value &lt; elem.max) {
+      return elem.name;
+    }
+  }
+};
+
+const convertAngleToDirection = (value)=> {
+  if (value &lt; 0 || value > 360)
+  errorTools.throwError('convertUnit.E-MISS-DIRECTION', { value: value });
+
+  for (let [index, elem] of directions.entries()) {
+
+    if (value >= elem.min &amp;&amp; value &lt; elem.max) {
+
+      return elem.name;
+
+    }
+
+  }
+
+};
+/**
+ * convert value from a unit to a unit
+ * @param {string|number} convert value
+ * @param {string} from - convert from the unit
+ * @param {string} to - convert to the unit
+ * @return {string|number} convert result
+ * @example
+ * const { unitConvertTools } = require('../src/index.js');
+
+ let result = unitConvertTools.convert(7, 'speed-meter-per-second', 'wind-level');
+ console.log(result);
+ result = unitConvertTools.convert(260, 'angle', 'direction');
+ console.log(result);
+ */
+const convert = (value, from, to)=> {
+  if (from === 'angle' &amp;&amp; to === 'direction') {
+    return convertAngleToDirection(value);
+  } else if (to === 'wind-level') {
+
+    value = convert(value, from, 'speed-meter-per-second');
+    return covertToWindLevel(value);
+  } else
+    return convertUnit(value).from(from).to(to);
+};
+
+module.exports = {
+  convert,
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Wed Apr 26 2017 03:12:13 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

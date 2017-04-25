@@ -1,4 +1,4 @@
-import osLocale from 'os-locale';
+const osLocale = require('os-locale');
 /**
  * get os language
  * @returns {string}
@@ -30,4 +30,4 @@ const osTools = {
   getPlatform,
 };
 
-export default osTools;
+module.exports = osTools;

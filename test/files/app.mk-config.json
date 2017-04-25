@@ -1,7 +1,16 @@
 {
   "test":{
     "item1":"app-item1",
-    "item2":"app-item2"
+    "item2":"app-item2",
+    "itemArray":{"array1":{
+      "item1":"app-item1",
+      "item2":"app-item2"
+    },
+      "array2": {
+        "item1": "app-item1",
+        "item2": "app-item2"
+      }}
+
   }
 
 }

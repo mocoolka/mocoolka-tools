@@ -1,5 +1,5 @@
-import objectTools from '../src/lib/object-tools.js';
-import  { assert, should, expect } from 'chai';
+const objectTools = require('../src/lib/object-tools.js');
+const  { assert, should, expect } = require('chai');
 
 describe('objectTools function', function () {
   it('clone', function () {

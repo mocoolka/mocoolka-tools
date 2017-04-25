@@ -1,5 +1,5 @@
-import stringTools from '../src/lib/string-tools.js';
-import  { assert, should, expect } from 'chai';
+const stringTools = require('../src/lib/string-tools.js');
+const  { assert, should, expect } = require('chai');
 
 describe('base function', function () {
   it('md5', function () {

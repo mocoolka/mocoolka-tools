@@ -1,6 +1,7 @@
-import { fileTools, globalTools } from '../src/index.js';
-import  { assert, should, expect } from 'chai';
-import path from 'path';
+const { fileTools, globalTools } = require('../src/index.js');
+const  { assert, should, expect } = require('chai');
+const path = require('path');
+
 
 describe('fileTools module', function () {
   it('openFile', function () {
@@ -16,10 +17,20 @@ describe('fileTools module', function () {
     assert.isNull(result);
   });
 
+  it('saveFile', function () {
+
+    fileTools.saveFile(fileTools.path(__dirname, 'files', 'test.txt'), 'test');
+    expect(fileTools.openFile(fileTools.path(__dirname, 'files', 'test.txt'))).to.be.equal('test');
+    fileTools.deleteFile(fileTools.path(__dirname, 'files', 'test.txt'))
+    fileTools.saveFile(fileTools.path(__dirname, 'files', 'files','files','test.txt'), 'test');
+    expect(fileTools.openFile(fileTools.path(__dirname, 'files', 'files','files','test.txt'))).to.be.equal('test');
+    fileTools.deleteDirExist(fileTools.path(__dirname, 'files', 'files'));
+  });
+
   it('path', function () {
-    let result = fileTools.path(fileTools.getCurrentDir(), 'files', 'package.js');
+    let result = fileTools.path(__dirname, 'files', 'package.js');
     assert.equal(typeof result, 'string');
-    result = fileTools.pathArray([fileTools.getCurrentDir(), 'files', 'package.js']);
+    result = fileTools.pathArray([__dirname, 'files', 'package.js']);
     assert.equal(typeof result, 'string');
     result = fileTools.openFile(fileTools.path(__dirname, 'files', 'package.json'));
     assert.equal(typeof result, 'object');
@@ -30,34 +41,14 @@ describe('fileTools module', function () {
   });
 
   it('pathArray', function () {
-    let result = fileTools.pathArray([fileTools.getCurrentDir(), 'files', 'package.js']);
+    let result = fileTools.pathArray([__dirname, 'files', 'package.js']);
     assert.equal(typeof result, 'string');
   });
 
   it('isFullPath', function () {
-    let fullPath = fileTools.pathArray([fileTools.getCurrentDir(), 'files', 'package.js']);
-    assert.isTrue(fileTools.isFullPath(fileTools.getCurrentDir(), fullPath));
-    assert.isFalse(fileTools.isFullPath(fileTools.getCurrentDir(), 'package.js'));
-  });
-
-  it('setRootDirectory || getRootDirectory', function () {
-    fileTools.setRootDirectory(fileTools.path(__dirname, '..'));
-    assert.equal(fileTools.getRootDirectory(), fileTools.path(__dirname, '..'));
-    assert.equal(fileTools.getRootDirectory(), globalTools.getGlobalItem('mocoolka-tools-file').rootDirectory);
-  });
-
-  it('getCurrentDir', function () {
-    fileTools.setRootDirectory(fileTools.path(__dirname, '..'));
-    assert.equal(fileTools.getCurrentDir(), fileTools.path(__dirname, '..'));
-    assert.equal(fileTools.getCurrentDir(),
-	  globalTools.getGlobalItem('mocoolka-tools-file').currentDirectory);
-  });
-
-  it('getToolsModuleDirectory', function () {
-    fileTools.setRootDirectory(fileTools.path(__dirname, '..'));
-    assert.equal(fileTools.getToolsModuleDirectory(), fileTools.path(__dirname, '..'));
-    assert.equal(fileTools.getToolsModuleDirectory(),
-	  globalTools.getGlobalItem('mocoolka-tools-file').toolsModuleRootDirectory);
+    let fullPath = fileTools.pathArray([__dirname, 'files', 'package.js']);
+    assert.isTrue(fileTools.isFullPath(__dirname, fullPath));
+    assert.isFalse(fileTools.isFullPath(__dirname, 'package.js'));
   });
 
   it('createDirNotExist | deleteDirExist | directoryExist', function () {
@@ -78,9 +69,27 @@ describe('fileTools module', function () {
     assert.isNull(fileTools.getFileExtName(fileTools.path(__dirname, 'file-tools')));
   });
 
+  it('getDirectoryName', function () {
+    expect(fileTools.getDirectoryName('/test/mk/mocoolka/file-tools.test.js'))
+      .to.be.equal('/test/mk/mocoolka');
+
+  });
+
+  it('getMKFileName', function () {
+    expect(fileTools.getMKFileName('/test/mk/mocoolka/file-tools.mocoolka.test.js'))
+      .to.be.equal('file-tools');
+
+  });
+
   it('getMKFileExtName', function () {
-    assert.equal(fileTools.getMKFileExtName(fileTools.path(__dirname, 'file-tools.test.js')), 'test.js');
-    assert.isNull(fileTools.getMKFileExtName(fileTools.path(__dirname, 'file-tools.js')));
+    expect(fileTools.getMKFileExtName(
+      fileTools.path(__dirname, '/test/mk/mocoolka/file-tools.model.test.js')))
+      .to.be.equal('model.test.js');
+    expect(fileTools.getMKFileExtName(
+      fileTools.path(__dirname, '/test/mk/mocoolka/file-tools'))).to.be.null;
+    expect(fileTools.getMKFileExtName(null)).to.be.null;
+    expect(fileTools.getMKFileExtName(undefined)).to.be.null;
+    expect(fileTools.getMKFileExtName([''])).to.be.null;
   });
 
   it('directoryDepth', function () {

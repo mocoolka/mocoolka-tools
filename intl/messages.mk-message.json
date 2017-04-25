@@ -1,33 +1,33 @@
 {
   "root": {
-    "error": {
-      "type" : "variable's type expected is {expected},actual is {actual}",
-      "directoryNotExist" : "{path} is not a directory",
-      "languageNotSupport" : "{languageNotSupport} be not supported by CLDR.CLDR support {supportLanguages}",
-      "notInit" : " module {moduleName} must init ,please first call function {initFunction}.",
-      "presence": "variable can't be blank"
+    "ERROR": {
+      "E-MISS-TYPE" : "The variable({variable})'s type expected is '{expected}',actual is '{actual}'",
+      "E-DIR-NOT-EXIST" : "The path ({path}) is not a directory",
+      "E-FILE-NOT-EXIST" : "The file be not found on '{path}'",
+      "E-LANG-NOT-SUPPORT" : "The language ({language}) be not supported by Application.Application support is '{supportLanguages}'",
+      "E-NOT-INIT" : "The module ({moduleName}) must init ,please first call function.",
+      "E-NOT-BLANK": "The variable can't be blank",
+      "E-MISS-PARSE-FILE" :"The error be throw while file be parsed on '{path}'",
+      "E-MISS-CALLBACK" :"callback function must exist"
      },
-    "i18n" :{
-      "parseCLDRError" :"CLDR read error from {path}",
-      "E-MISS-MESSAGE" : "Missing required message content '{value}'.",
-      "formatCurrencyError" : "formatCurrency error. currencySymbol:{currencySymbol} value:{value} options:{options} language:{language}",
-      "formatUnitError" : "formatUnit error. unit:{unit} value:{value} options:{options} language:{language}"
+    "convertUnit":{
+      "E-MISS-DIRECTION" : "direction must is in middle of 0 and 360. input value is {value}. "
     }
   },
   "zh-Hans":{
-    "error": {
-      "type" : "类型错误。期望是 {expected},实际是 {actual}",
-      "directoryNotExist" : "{path} 文件路径不存在",
-      "languageNotSupport" : "CLDR不支持{languageNotSupport} be not supported by CLDR.支持的语言有 {supportLanguages}",
-      "notInit" : " 模块必须先初始化 {moduleName}  ,请先调用初速化函数 {initFunction}.",
-      "presence": "变量不能为空值"
+    "ERROR": {
+      "E-MISS-TYPE" : "类型错误。期望是 {expected},实际是 {actual}",
+      "E-DIR-NOT-EXIST" : "{path} 文件路径不存在",
+      "E-FILE-NOT-EXIST" : "没有找到指定的文件'{path}'",
+      "E-LANG-NOT-SUPPORT" : "CLDR不支持{languageNotSupport} be not supported by CLDR.支持的语言有 {supportLanguages}",
+      "E-NOT-INIT" : " 模块必须先初始化 {moduleName}  ,请先调用初速化函数 {initFunction}.",
+      "E-NOT-BLANK": "变量不能为空值",
+      "E-MISS-CALLBACK" :"要求的回调函数不存在"
     },
-    "i18n" :{
-      "parseCLDRError" :"CLDR文件读取时发生错误{path}",
-      "E-MISS-MESSAGE" : "'{value}'消息没有被发现，请核对配置消息配置文件.",
-      "formatCurrencyError" : "格式化货币发生错误. 货币符号{currencySymbol} 值:{value} 选项:{options} 语言:{language}",
-      "formatUnitError" : "格式化单位时货币发生错误. 单位:{unit}  值:{value} 选项:{options} 语言:{language}"
+    "convertUnit":{
+      "E-MISS-DIRECTION" : "值{value}不在0-360之间"
     }
+
   }
 }
 

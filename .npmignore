@@ -3,9 +3,7 @@ node_modules
 .babelrc
 test
 examples
-src
 docs
 jsdoc.json
 .jscsrc
-logs
 jsdoc.json
